@@ -1,4 +1,5 @@
 import React from 'react';
+import GoogleLogin from 'react-google-login';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -9,11 +10,12 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
+import Divider from '@material-ui/core/Divider';
 import { db } from '../../components/firebase';
 
 const styles = (theme) => ({
 	root: {
-		height: '100vh'
+		height: '100vh',
 	},
 	image: {
 		backgroundImage: 'url(https://source.unsplash.com/1600x900/?building-monochrome)',
@@ -86,6 +88,11 @@ class Login extends React.Component {
 		this.postData();
 	};
 
+    responseGoogle = (response) =>{
+        console.log(response)
+        console.log(response.profileObj)
+    }
+
 
 	render() {
 		const { classes } = this.props;
@@ -137,6 +144,16 @@ class Login extends React.Component {
 							>
 								Sign In
 							</Button>
+                            <Divider variant="middle"/>
+                            <Grid style={{ margin: 20, paddingLeft: '33%' }}>
+                                <GoogleLogin
+                                    clientId="612949862331-7g9n54abfh6mqshf9tqatpn617u7vgnr.apps.googleusercontent.com"
+                                    buttonText="Log in with Google"
+                                    onSuccess={this.responseGoogle}
+                                    onFailure={this.responseGoogle}
+                                    cookiePolicy={'single_host_origin'}
+                                />
+                            </Grid>
                             <Grid container spacing={3}>
 							    <Grid item xs={12}>
 							    	<Link href="/signup" variant="body2">
