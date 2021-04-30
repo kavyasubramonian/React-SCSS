@@ -1,3 +1,4 @@
+//To add table
 import React from 'react';
 import ProfileData from './ProfileData';
 
