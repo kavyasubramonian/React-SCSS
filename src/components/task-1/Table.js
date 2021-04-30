@@ -1,3 +1,5 @@
+//Grid to be added
+
 import React from 'react';
 import {  Link as RouterLink } from 'react-router-dom';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
@@ -82,3 +84,40 @@ export default function CustomizedTables() {
     </TableContainer>
   );
 }
+
+// const {  Row, Col, Divider  } = antd;
+
+// const style = { background: '#0092ff', padding: '8px 0' };
+
+// ReactDOM.render(
+//   <>
+//     <Divider orientation="left">Vertical</Divider>
+//     <Row gutter={[16, 24]}>
+//       <Col className="gutter-row" span={6}>
+//         <div style={style}>col-6</div>
+//       </Col>
+//       <Col className="gutter-row" span={6}>
+//         <div style={style}>col-6</div>
+//       </Col>
+//       <Col className="gutter-row" span={6}>
+//         <div style={style}>col-6</div>
+//       </Col>
+//       <Col className="gutter-row" span={6}>
+//         <div style={style}>col-6</div>
+//       </Col>
+//       <Col className="gutter-row" span={6}>
+//         <div style={style}>col-6</div>
+//       </Col>
+//       <Col className="gutter-row" span={6}>
+//         <div style={style}>col-6</div>
+//       </Col>
+//       <Col className="gutter-row" span={6}>
+//         <div style={style}>col-6</div>
+//       </Col>
+//       <Col className="gutter-row" span={6}>
+//         <div style={style}>col-6</div>
+//       </Col>
+//     </Row>
+//   </>,
+//   mountNode,
+// );
