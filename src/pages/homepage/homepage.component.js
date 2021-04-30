@@ -3,8 +3,7 @@ import NavBar from '../../components/task-1/NavBar';
 import './homepage.styles.scss'
 
 const HomePage = () => (
-        <NavBar/>
+    <NavBar/>
 )
 
 export default HomePage
-//export default <component name>

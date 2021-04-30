@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import ViewListIcon from '@material-ui/icons/ViewList';
+import Container from '@material-ui/core/Container';
+import Table from './Table';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,7 +30,7 @@ export default function ButtonAppBar() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{ background: '#ff6f00', marginBottom: 30 }}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             <ViewListIcon/>
@@ -47,6 +49,9 @@ export default function ButtonAppBar() {
           </ToggleButtonGroup>
         </Toolbar>
       </AppBar>
+      <Container>
+        <Table/>
+      </Container>
     </div>
   );
 }
